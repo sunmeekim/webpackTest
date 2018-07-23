@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Libraries Code Splitting</title>
+    <title>todo list 만들기</title>
     <link rel="stylesheet" href="dist/styles.css">
     <!-- <script src="https://unpkg.com/lodash@4.16.6"></script> -->
 </head>
 <body>
-    <header>
-        <h3>Libraries Code Splitting</h3>
-    </header>
-    <div>
-        <label for="p1"><strong>Moment JS : </strong></label>
-        <p class="p1">
-            not yet loaded
-        </p>
-        <label for="p2"><strong>Lodash JS : </strong></label>
-        <p class="p2">
-            not yet loaded
-        </p>
-    </div>
-    <div class="container">
-            hello
-    </div>
-    <div>
-        middleware plus
+    <div class="todoWrap">
+        <h1 class="todoTitle">TODO LIST</h1>
+        <div class="todoForm">
+            <label class="todoInputArea" for="todo"><input type="text" id='todo' class="todoInput"/></label>
+            <button type="submit" class="todoBtn">작성</button>
+        </div>
+        <div class="todoCont">
+            <ul class=todoList>
+                <li class=todoItem>
+                    <a href="#" class=todoLink>ddddddd</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <!-- <script src="app/index.js"></script> -->
     <!-- <script src="dist/bundle.js"></script> -->
