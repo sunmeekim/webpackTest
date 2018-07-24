@@ -7,17 +7,54 @@ var moment = require('moment');
 var $ = require('jquery');
 console.log("loaded jQuery version is " + $.fn.jquery);
 
-const inputData = document.getElementById('todo').value;
-// const listItem = document.getElementsByClassName('todoLink')[i];  
-function todoWriteSubmit () {
-  const listItem = document.getElementsByClassName('todoItem')[0];
-  return listItem  
-}
-  
-document.getElementsByClassName('todoList').appendChild(todoWriteSubmit ());
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  // ele[0].innerHTML = moment().format();
-  // ele[1].innerHTML = _.drop([1,2,3],0);
-  // ele2.innerHTML = "webpack loader!!!!!!!!!";
+const todoList = () => {
+  
+  const todoWrap = document.getElementById('todoCont');
+  const todoList = '<ul class=\"todoList\" id=\"todoList\"></ul>';
+  todoWrap.innerHTML = todoList;
+
+  return 
+}
+const todoItem = () => {
+  
+  const inputData = document.getElementById('todo').value;
+  const itemLink = document.createElement('a');
+  itemLink.className = 'todoLink';
+  itemLink.href = '#'
+  itemLink.innerHTML = inputData;
+  const item  = document.createElement('li');
+  item.className = 'todoItem';
+// const item = '<li class=\"todoItem\"><a href=\"#\" class=\"todoLink\">'+ inputData +'</a></li>'
+
+  document.getElementById("todoList").appendChild(item).appendChild(itemLink);
+}
+
+// const todoCheck = () => {
+//   var checkPoint = document.querySelector('.todoItem').classList.contains('done');
+//   if(checkPoint) {
+//     document.querySelector('.todoItem').setAttribute("class","todoItem done")
+//   } else {
+//     document.querySelector('.todoItem').setAttribute("class","todoItem")
+//   }
+
+// } 
+// const todoLink = document.querySelector('.todoLink');
+// todoLink.addEventListener ("click", function(e){
+//   e.preventDefault();
+//   todoCheck();
+// });
+
+const inputBtn = document.getElementById('todoBtn');
+const resetBtn = document.getElementById('todoResetBtn');
+
+inputBtn.addEventListener("click", function(e){
+  e.preventDefault()
+  todoList();
+  todoItem();
+  
+});
+resetBtn.addEventListener("click", function(e) {
+  e.preventDefault()
+  document.getElementsByClassName("todoList")[0].remove();
 });

@@ -12,15 +12,16 @@
     <div class="todoWrap">
         <h1 class="todoTitle">TODO LIST</h1>
         <div class="todoForm">
-            <label class="todoInputArea" for="todo"><input type="text" id='todo' class="todoInput"/></label>
-            <button type="submit" class="todoBtn">작성</button>
+            <label class="todoInputArea" for="todo"><input type="text" id='todo' class="todoInput" value=""/></label>
+            <button type="button" class="todoBtn" id="todoBtn">작성</button>
+            <button type="button" class="todoBtn" id="todoResetBtn">초기화</button>
         </div>
-        <div class="todoCont">
-            <ul class=todoList>
+        <div class="todoCont" id="todoCont">
+            <!-- <ul class=todoList>
                 <li class=todoItem>
-                    <a href="#" class=todoLink>ddddddd</a>
+                    <a href="#" class=todoLink></a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
     <!-- <script src="app/index.js"></script> -->
